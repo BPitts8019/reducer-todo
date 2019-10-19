@@ -11,7 +11,7 @@ function TodoForm () {
       setTaskName(event.target.value);
    };
 
-   const handleClick = event => {
+   const handleAddTask = event => {
          event.preventDefault();
          
          // check for errors
@@ -35,15 +35,22 @@ function TodoForm () {
          });
    };
 
+   const handleClear = event => {
+      event.preventDefault();
+
+      dispatch({type: "CLEAR_COMPLETED"});
+   };
+
    return (
-      <form onSubmit={handleClick}>
+      <form>
          <input 
             type="text" 
             placeholder="...todo" 
             onChange={handleChange} 
             value={taskName} 
          />
-         <button type="submit">Add Task</button>
+         <button onClick={handleAddTask}>Add Task</button>
+         <button onClick={handleClear}>Clear Completed</button>
       </form>
    );
 }

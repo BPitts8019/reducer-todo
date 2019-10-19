@@ -20,6 +20,8 @@ export function reducer (state, action) {
          toggleItem.completed = !toggleItem.completed;
 
          return currentState;
+      case "CLEAR_COMPLETED":
+         return state.filter(todo => !todo.completed);
       default:
          return state;
    }
