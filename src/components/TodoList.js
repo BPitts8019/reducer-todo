@@ -14,10 +14,7 @@ function TodoList () {
    const [state, dispatch] = useReducer(reducer, initialState);
 
    return (
-      <TodoListContext.Provider value={{
-         state,
-         dispatch
-      }}>
+      <TodoListContext.Provider value={{dispatch}}>
          <div>
             <TodoForm />
             <div className="todo-list">

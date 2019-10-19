@@ -1,22 +1,21 @@
 .App {
-  text-align: center;
+   margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
+.todo-list {
+   list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo-list .todo {
+   color: inherit;
+   cursor: pointer;
 }
 
-.App-link {
-  color: #09d3ac;
+.todo-list .todo:hover {
+   outline: 1px solid dodgerblue;
+}
+
+.todo-list .todo.completed {
+   color: lightgrey;
+   text-decoration: line-through;
 }

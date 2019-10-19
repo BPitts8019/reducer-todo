@@ -37,7 +37,12 @@ function TodoForm () {
 
    return (
       <form onSubmit={handleClick}>
-         <input className="newTask" type="text" placeholder="...todo" onChange={handleChange} value={taskName} />
+         <input 
+            type="text" 
+            placeholder="...todo" 
+            onChange={handleChange} 
+            value={taskName} 
+         />
          <button type="submit">Add Task</button>
       </form>
    );
