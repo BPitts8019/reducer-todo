@@ -1,4 +1,7 @@
-import React from "react";
+import React, {useContext} from "react";
+
+//context
+import TodoListContext from "../contexts/TodoList.js";
 
 /*
 {
@@ -8,11 +11,13 @@ import React from "react";
 }
 */
 function Todo ({id, item, completed}) {
+   const {dispatch} = useContext(TodoListContext);
+
    return (
       <div 
          id={id} 
          className={(completed)? "todo completed" : "todo"}
-         onClick={event => {console.log(event.target.id)}}
+         onClick={event => {dispatch({type: "TOGGLE_COMPLETED", payload: id})}}
       >
          {item}
       </div>

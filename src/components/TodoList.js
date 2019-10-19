@@ -1,4 +1,4 @@
-import React, {useContext, useReducer} from "react";
+import React, {useReducer} from "react";
 
 //reducer
 import {initialState, reducer} from "../reducers/TodoList.js";
@@ -21,7 +21,7 @@ function TodoList () {
          <div>
             <TodoForm />
             <div className="todo-list">
-               {state.map(item => <Todo {...item}/>)}
+               {state.map(item => <Todo key={item.id} {...item}/>)}
             </div>
          </div>
       </TodoListContext.Provider>
