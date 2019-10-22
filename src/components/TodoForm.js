@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
+// import {APP_WIDTH} from "./components/style-vars.js";
+// import styled from "styled-components";
 
 //context
 import TodoListContext from "../contexts/TodoList.js";
@@ -68,7 +69,7 @@ function TodoForm() {
    };
 
    return (
-      <form name="todoForm">
+      <form className="todo-form" name="todoForm">
          {/* <FontAwesomeIcon icon={faClipboardList} color="lightGrey" size="2x" /> */}
          <input
             type="text"
